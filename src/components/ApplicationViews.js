@@ -2,9 +2,9 @@ import { Route } from "react-router-dom";
 import React from "react";
 import Home from "./home/Home";
 //only include these once they are built - previous practice exercise
-import LocationCard from "./location/LocationCard";
+import LocationList from "./location/LocationList";
 import EmployeeList from "./employees/EmployeeList";
-import OwnerCard from "./owner/OwnerCard";
+import OwnerList from "./owner/OwnerList";
 import AnimalList from "./animal/AnimalList"
 
 const ApplicationViews = () => {
@@ -26,7 +26,7 @@ const ApplicationViews = () => {
             <Route
         path="/location"
         render={props => {
-          return <LocationCard />;
+          return <LocationList />;
         }}
       />
             <Route
@@ -38,7 +38,7 @@ const ApplicationViews = () => {
             <Route
         path="/owner"
         render={props => {
-          return <OwnerCard />;
+          return <OwnerList />;
         }}
       />
     </React.Fragment>
