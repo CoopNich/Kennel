@@ -1,11 +1,11 @@
 import { Route } from "react-router-dom";
 import React from "react";
 import Home from "./home/Home";
-import AnimalCard from "./animal/AnimalCard";
 //only include these once they are built - previous practice exercise
 import LocationCard from "./location/LocationCard";
-import EmployeeCard from "./employee/EmployeeCard";
+import EmployeeList from "./employees/EmployeeList";
 import OwnerCard from "./owner/OwnerCard";
+import AnimalList from "./animal/AnimalList"
 
 const ApplicationViews = () => {
   return (
@@ -20,7 +20,7 @@ const ApplicationViews = () => {
       <Route
         path="/animals"
         render={props => {
-          return <AnimalCard />;
+          return <AnimalList />;
         }}
       />
             <Route
@@ -32,7 +32,7 @@ const ApplicationViews = () => {
             <Route
         path="/employee"
         render={props => {
-          return <EmployeeCard />;
+          return <EmployeeList />;
         }}
       />
             <Route
