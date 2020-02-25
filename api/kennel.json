@@ -1,26 +1,70 @@
 {
-    "animals": [
-        { "id": 1, "name": "Doodles", "breed": "Poodle"},
-        { "id": 2, "name": "Decker", "breed": "German Shepherd" },
-        { "id": 3, "name": "Esme", "breed": "Pitbull" }
-    ],
-    
-    "employee": [
-        { "id": 1, "name": "Doodles", "breed": "Poodle"},
-        { "id": 2, "name": "Decker", "breed": "German Shepherd" },
-        { "id": 3, "name": "Esme", "breed": "Pitbull" }
-    ],
-
-    "location": [
-        { "id": 1, "name": "Doodles", "breed": "Poodle"},
-        { "id": 2, "name": "Decker", "breed": "German Shepherd" },
-        { "id": 3, "name": "Esme", "breed": "Pitbull" }
-    ],
-
-    "owner": [
-        { "id": 1, "name": "Doodles", "breed": "Poodle"},
-        { "id": 2, "name": "Decker", "breed": "German Shepherd" },
-        { "id": 3, "name": "Esme", "breed": "Pitbull" }
-    ]
-
+  "animals": [
+    {
+      "id": 1,
+      "name": "Doodles",
+      "breed": "Poodle"
+    },
+    {
+        "id": 2,
+        "name": "Archie",
+        "breed": "Shelty"
+      },
+    {
+      "id": 3,
+      "name": "Esme",
+      "breed": "Pitbull"
+    }
+  ],
+  "employee": [
+    {
+      "id": 1,
+      "name": "Katie",
+      "job": "Euthenizer"
+    },
+    {
+      "id": 2,
+      "name": "Roxy",
+      "job": "Groomer"
+    },
+    {
+      "id": 3,
+      "name": "Zoidberg",
+      "job": "Feeder"
+    }
+  ],
+  "location": [
+    {
+      "id": 1,
+      "name": "East Nashville",
+      "address": "505 Puppy Way"
+    },
+    {
+      "id": 2,
+      "name": "South Nashville",
+      "address": "1234 Paw Parkway"
+    },
+    {
+      "id": 3,
+      "name": "Franklin",
+      "address": "589 Ruff Road"
+    }
+  ],
+  "owner": [
+    {
+      "id": 1,
+      "name": "Cooper",
+      "phone": "662-544-0624"
+    },
+    {
+      "id": 2,
+      "name": "Andy",
+      "phone": "123-456-7890"
+    },
+    {
+      "id": 3,
+      "name": "Francis",
+      "phone": "555-555-5555"
+    }
+  ]
 }

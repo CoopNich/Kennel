@@ -1,6 +1,8 @@
 import React from "react";
 
-const EmployeeCard = () => {
+import "./Employee.css"
+
+const EmployeeCard = props => {
   return (
     <div className="card">
       <div className="card-content">
@@ -8,9 +10,9 @@ const EmployeeCard = () => {
           <img src={require("./dog.svg")} alt="My Dog" />
         </picture>
         <h3>
-          Name: <span className="card-Employeename">Mr. Guy</span>
+          Name: <span className="card-Employeename">{props.employee.name}</span>
         </h3>
-        <p>Dog Handling Engineer</p>
+        <p> Job: {props.employee.job}</p>
       </div>
     </div>
   );
