@@ -5,14 +5,19 @@ import LocationManager from '../../modules/LocationManager';
 
 const LocationList = () => {
   // The initial state is an empty array
-  const [locations, setlocations] = useState([]);
+  const [locations, setLocations] = useState([]);
 
   const getlocations = () => {
     // After the data comes back from the API, we
     //  use the setlocations function to update state
     return LocationManager.getAll().then(locationsFromAPI => {
-      setlocations(locationsFromAPI)
+      setLocations(locationsFromAPI)
     });
+  };
+
+  const deleteLocation = id => {
+    LocationManager.delete(id)
+      .then(() => LocationManager.getAll().then(setLocations));
   };
 
   // got the locations from the API on the component's first render
@@ -24,7 +29,7 @@ const LocationList = () => {
   return(
     <div className="container-cards">
       {locations.map(location =>
-        <LocationCard key={location.id} location={location} />
+        <LocationCard key={location.id} location={location} deleteLocation={deleteLocation} />
       )}
     </div>
   );

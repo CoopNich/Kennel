@@ -6,10 +6,10 @@
       "breed": "Poodle"
     },
     {
-        "id": 2,
-        "name": "Archie",
-        "breed": "Shelty"
-      },
+      "id": 2,
+      "name": "Archie",
+      "breed": "Shelty"
+    },
     {
       "id": 3,
       "name": "Esme",
@@ -17,11 +17,6 @@
     }
   ],
   "employee": [
-    {
-      "id": 1,
-      "name": "Katie",
-      "job": "Euthenizer"
-    },
     {
       "id": 2,
       "name": "Roxy",
@@ -43,11 +38,6 @@
       "id": 2,
       "name": "South Nashville",
       "address": "1234 Paw Parkway"
-    },
-    {
-      "id": 3,
-      "name": "Franklin",
-      "address": "589 Ruff Road"
     }
   ],
   "owner": [
@@ -55,11 +45,6 @@
       "id": 1,
       "name": "Cooper",
       "phone": "662-544-0624"
-    },
-    {
-      "id": 2,
-      "name": "Andy",
-      "phone": "123-456-7890"
     },
     {
       "id": 3,
