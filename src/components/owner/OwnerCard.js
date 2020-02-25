@@ -1,6 +1,6 @@
 import React from "react";
 
-const OwnerCard = () => {
+const OwnerCard = (props) => {
   return (
     <div className="card">
       <div className="card-content">
@@ -8,9 +8,9 @@ const OwnerCard = () => {
           <img src={require("./dog.svg")} alt="My Dog" />
         </picture>
         <h3>
-          Owner: <span className="card-ownerName">Mr. Kaynine</span>
+        <span className="card-ownerName">{props.owner.name}</span>
         </h3>
-        <p>Credentials: Ph.D in Dog Stuff</p>
+        <p>{props.owner.phone}</p>
       </div>
     </div>
   );

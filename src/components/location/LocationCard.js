@@ -1,6 +1,6 @@
 import React from "react";
 
-const LocationCard = () => {
+const LocationCard = (props) => {
   return (
     <div className="card">
       <div className="card-content">
@@ -8,9 +8,9 @@ const LocationCard = () => {
           <img src={require("./dog.svg")} alt="My Dog" />
         </picture>
         <h3>
-          Place: <span className="card-locationName">Kennel Bois</span>
+        <span className="card-locationName">{props.location.name}</span>
         </h3>
-        <p>Location: 500 Puppy Way</p>
+        <p>{props.location.address}</p>
       </div>
     </div>
   );
