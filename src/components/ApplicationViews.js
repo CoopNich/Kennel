@@ -6,6 +6,8 @@ import LocationList from "./location/LocationList";
 import EmployeeList from "./employees/EmployeeList";
 import OwnerList from "./owner/OwnerList";
 import AnimalList from "./animal/AnimalList"
+import AnimalDetail from "./animal/AnimalDetail";
+import LocationDetail from "./location/LocationDetail";
 
 const ApplicationViews = () => {
   return (
@@ -18,24 +20,36 @@ const ApplicationViews = () => {
         }}
       />
       <Route
-        path="/animals"
+        exact path="/animals"
         render={props => {
           return <AnimalList />;
         }}
       />
-            <Route
-        path="/location"
+      <Route
+        path="/animals/:animalId(\d+)"
+        render={(props) => {
+          return <AnimalDetail animalId={parseInt(props.match.params.animalId)} />
+        }}
+      />
+      <Route
+        exact path="/location"
         render={props => {
           return <LocationList />;
         }}
       />
-            <Route
-        path="/employee"
+       <Route
+        path="/location/:locationId(\d+)"
+        render={(props) => {
+          return <LocationDetail locationId={parseInt(props.match.params.locationId)} />
+        }}
+      />
+      <Route
+         path="/employee"
         render={props => {
           return <EmployeeList />;
         }}
       />
-            <Route
+      <Route
         path="/owner"
         render={props => {
           return <OwnerList />;
