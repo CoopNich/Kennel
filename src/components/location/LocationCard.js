@@ -6,7 +6,7 @@ const LocationCard = (props) => {
     <div className="card">
       <div className="card-content">
         <picture>
-          <img src={require("./dog.svg")} alt="My Dog" />
+          <img src={require("./school-building.svg")} alt="My Dog" />
         </picture>
         <h3>
         <span className="card-locationName">{props.location.name}</span>

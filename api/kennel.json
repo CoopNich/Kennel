@@ -2,11 +2,6 @@
   "animals": [
     {
       "id": 1,
-      "name": "Doodles",
-      "breed": "Poodle"
-    },
-    {
-      "id": 2,
       "name": "Archie",
       "breed": "Shelty"
     }
@@ -27,12 +22,7 @@
     {
       "id": 1,
       "name": "East Nashville",
-      "address": "505 Puppy Way"
-    },
-    {
-      "id": 2,
-      "name": "South Nashville",
-      "address": "1234 Paw Parkway"
+      "address": "505 Puppy Parkway"
     }
   ],
   "owner": [

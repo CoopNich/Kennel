@@ -27,8 +27,13 @@ const ApplicationViews = () => {
       />
       <Route
         path="/animals/:animalId(\d+)"
-        render={(props) => {
-          return <AnimalDetail animalId={parseInt(props.match.params.animalId)} />
+        render={props => {
+          return (
+            <AnimalDetail
+              animalId={parseInt(props.match.params.animalId)}
+              {...props}
+            />
+          );
         }}
       />
       <Route
@@ -37,14 +42,19 @@ const ApplicationViews = () => {
           return <LocationList />;
         }}
       />
-       <Route
+      <Route
         path="/location/:locationId(\d+)"
-        render={(props) => {
-          return <LocationDetail locationId={parseInt(props.match.params.locationId)} />
+        render={props => {
+          return (
+            <LocationDetail 
+            locationId={parseInt(props.match.params.locationId)}
+              {...props}
+            />
+          );
         }}
       />
       <Route
-         path="/employee"
+        path="/employee"
         render={props => {
           return <EmployeeList />;
         }}
