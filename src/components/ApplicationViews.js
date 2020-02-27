@@ -24,7 +24,7 @@ const ApplicationViews = () => {
       />
       <Route
         exact
-        path="/"
+        path="/ "
         render={props => {
           return <Home />;
         }}
