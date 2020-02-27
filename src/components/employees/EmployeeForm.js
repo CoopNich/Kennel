@@ -14,7 +14,7 @@ const EmployeeForm = props => {
 
   const constructNewEmployee = evt => {
     evt.preventDefault();
-    if (employee.Name === "" || employee.breed === "") {
+    if (employee.name === "" || employee.job === "") {
       window.alert("Please input an employee name and job title");
     } else {
       setIsLoading(true);

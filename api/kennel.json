@@ -13,11 +13,6 @@
   ],
   "employee": [
     {
-      "id": 2,
-      "name": "Roxy",
-      "job": "Groomer"
-    },
-    {
       "id": 3,
       "name": "Zoidberg",
       "job": "Feeder"

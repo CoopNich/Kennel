@@ -10,6 +10,8 @@ import AnimalDetail from "./animal/AnimalDetail";
 import LocationDetail from "./location/LocationDetail";
 import AnimalForm from './animal/AnimalForm'
 import EmployeeForm from './employees/EmployeeForm'
+import LocationForm from './location/LocationForm'
+import OwnerForm from "./owner/OwnerForm"
 
 const ApplicationViews = () => {
   return (
@@ -47,9 +49,13 @@ const ApplicationViews = () => {
       <Route
         exact path="/location"
         render={props => {
-          return <LocationList />;
+          return <LocationList {...props} />;
         }}
       />
+      <Route path="/location/new"
+        render={(props) => {
+          return <LocationForm {...props} />
+        }} />
       <Route
         path="/location/:locationId(\d+)"
         render={props => {
@@ -72,11 +78,16 @@ const ApplicationViews = () => {
           return <EmployeeForm {...props} />
         }} />
       <Route
-        path="/owner"
+        exact path="/owner"
         render={props => {
-          return <OwnerList />;
+          return <OwnerList {...props} />;
         }}
       />
+      <Route
+        path="/owner/new"
+        render={(props) => {
+          return <OwnerForm {...props} />
+        }} />
     </React.Fragment>
   );
 };
