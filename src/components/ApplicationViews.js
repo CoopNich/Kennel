@@ -8,6 +8,8 @@ import OwnerList from "./owner/OwnerList";
 import AnimalList from "./animal/AnimalList"
 import AnimalDetail from "./animal/AnimalDetail";
 import LocationDetail from "./location/LocationDetail";
+import AnimalForm from './animal/AnimalForm'
+import EmployeeForm from './employees/EmployeeForm'
 
 const ApplicationViews = () => {
   return (
@@ -22,7 +24,13 @@ const ApplicationViews = () => {
       <Route
         exact path="/animals"
         render={props => {
-          return <AnimalList />;
+          return <AnimalList {...props} />;
+        }}
+      />
+      <Route path="/animals/new"
+        render={(props) => {
+          return <AnimalForm {...props}
+          />
         }}
       />
       <Route
@@ -46,19 +54,23 @@ const ApplicationViews = () => {
         path="/location/:locationId(\d+)"
         render={props => {
           return (
-            <LocationDetail 
-            locationId={parseInt(props.match.params.locationId)}
+            <LocationDetail
+              locationId={parseInt(props.match.params.locationId)}
               {...props}
             />
           );
         }}
       />
       <Route
-        path="/employee"
+        exact path="/employee"
         render={props => {
-          return <EmployeeList />;
+          return <EmployeeList {...props} />;
         }}
       />
+      <Route path="/employee/new"
+        render={(props) => {
+          return <EmployeeForm {...props} />
+        }} />
       <Route
         path="/owner"
         render={props => {
