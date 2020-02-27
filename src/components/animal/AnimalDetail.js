@@ -26,6 +26,20 @@ const AnimalDetail = props => {
     );
   };
 
+  if (animal.name === undefined) {
+    return (
+      <div className="card">
+      <div className="card-content">
+        <picture>
+          <img src={require("./notFound.svg")} alt="Not Found" />
+        </picture>
+        <h3>
+          There is no animal here. Frowny face.
+        </h3>
+      </div>
+    </div>
+    )
+  } else {
   return (
     <div className="card">
       <div className="card-content">
@@ -43,5 +57,6 @@ const AnimalDetail = props => {
     </div>
   );
 };
+}
 
 export default AnimalDetail;
