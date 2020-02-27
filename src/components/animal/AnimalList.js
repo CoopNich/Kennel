@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import AnimalCard from './AnimalCard';
 import AnimalManager from '../../modules/AnimalManager';
 
-const AnimalList = () => {
+const AnimalList = (props) => {
     // The initial state is an empty array
     const [animals, setAnimals] = useState([]);
 
@@ -17,16 +17,25 @@ const AnimalList = () => {
 
     const deleteAnimal = id => {
         AnimalManager.delete(id)
-          .then(() => AnimalManager.getAll().then(setAnimals));
-      };
+            .then(() => AnimalManager.getAll().then(setAnimals));
+    };
 
     // got the animals from the API on the component's first render
     useEffect(() => {
         getAnimals();
     }, []);
 
-    // Finally we use map() to "loop over" the animals array to show a list of animal cards
+
+
     return (
+        <React.Fragment>
+        <section className="section-content">
+            <button type="button"
+                className="btn"
+                onClick={() => { props.history.push("/animals/new") }}>
+                Admit Animal
+  </button>
+        </section>
         <div className="container-cards">
             {animals.map(animal =>
                 <AnimalCard
@@ -34,6 +43,8 @@ const AnimalList = () => {
                     animal={animal}
                     deleteAnimal={deleteAnimal} />)}
         </div>
+        </React.Fragment>
     );
+
 };
 export default AnimalList

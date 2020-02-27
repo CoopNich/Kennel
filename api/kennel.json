@@ -4,18 +4,23 @@
       "id": 1,
       "name": "Archie",
       "breed": "Shelty"
+    },
+    {
+      "name": "lil bruh",
+      "breed": "doggie",
+      "id": 2
     }
   ],
   "employee": [
     {
-      "id": 2,
-      "name": "Roxy",
-      "job": "Groomer"
-    },
-    {
       "id": 3,
       "name": "Zoidberg",
       "job": "Feeder"
+    },
+    {
+      "name": "Katie",
+      "job": "Euthenizer",
+      "id": 4
     }
   ],
   "location": [
