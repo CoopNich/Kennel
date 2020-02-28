@@ -41,7 +41,10 @@ const AnimalList = (props) => {
                 <AnimalCard
                     key={animal.id}
                     animal={animal}
-                    deleteAnimal={deleteAnimal} />)}
+                    deleteAnimal={deleteAnimal} 
+                    {...props}
+                    />
+                    )}
         </div>
         </React.Fragment>
     );
