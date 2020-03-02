@@ -36,10 +36,13 @@ const LocationList = (props) => {
     </button>
   </section>
     <div className="container-cards">
-      {locations.map(location =>
-        <LocationCard key={location.id}
-         location={location} 
-         deleteLocation={deleteLocation} />
+      {locations.map(kennelLocation =>
+        <LocationCard 
+         key={kennelLocation.id}
+         kennelLocation={kennelLocation}
+         address={kennelLocation.address} 
+         deleteLocation={deleteLocation}
+         {...props} />
       )}
     </div>
     </React.Fragment>
