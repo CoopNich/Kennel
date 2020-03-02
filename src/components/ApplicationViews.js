@@ -14,6 +14,7 @@ import LocationForm from './location/LocationForm'
 import OwnerForm from "./owner/OwnerForm"
 import AnimalEditForm from "./animal/AnimalEditForm"
 import EmployeeEditForm from "./employees/EmployeeEditForm"
+import OwnerEditForm from "./owner/OwnerEditForm"
 import Login from "./auth/Login";
 
 const ApplicationViews = () => {
@@ -121,6 +122,13 @@ const ApplicationViews = () => {
           }
         }}
       />
+      <Route path="/owner/:ownerId(\d+)/edit" render={props => {
+        if (isAuthenticated()) {
+          return <OwnerEditForm {...props} />
+        } else {
+          return <Redirect to="/login" />
+        }
+      }} />
       <Route
         path="/owner/new"
         render={(props) => {
