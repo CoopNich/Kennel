@@ -37,7 +37,7 @@ const OwnerList = (props) => {
   </section>
     <div className="container-cards">
       {owners.map(owner =>
-        <OwnerCard key={owner.id} owner={owner} deleteOwner={deleteOwner} />
+        <OwnerCard key={owner.id} owner={owner} deleteOwner={deleteOwner} {...props} />
       )}
     </div>
     </React.Fragment>

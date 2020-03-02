@@ -2,7 +2,7 @@
   "animals": [
     {
       "id": 1,
-      "name": "Archie",
+      "name": "Archibald",
       "breed": "Shelty"
     },
     {
@@ -14,7 +14,7 @@
   "employee": [
     {
       "id": 3,
-      "name": "Zoidberg",
+      "name": "Zoidberg!",
       "job": "Feeder"
     },
     {
@@ -27,14 +27,14 @@
     {
       "id": 1,
       "name": "East Nashville",
-      "address": "505 Puppy Parkway"
+      "address": "505 Puppy Parkway!!!!"
     }
   ],
   "owner": [
     {
       "id": 1,
-      "name": "Cooper",
-      "phone": "662-544-0624"
+      "name": "Cooper N.",
+      "phone": "662-544-0000"
     },
     {
       "id": 3,
