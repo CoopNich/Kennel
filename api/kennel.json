@@ -3,24 +3,26 @@
     {
       "id": 1,
       "name": "Archibald",
-      "breed": "Shelty"
+      "breed": "Shelty",
+      "employeeId": 2
     },
     {
       "name": "lil bruh",
       "breed": "doggie",
+      "employeeId": 1,
       "id": 2
     }
   ],
   "employee": [
     {
-      "id": 3,
+      "id": 1,
       "name": "Zoidberg!",
       "job": "Feeder"
     },
     {
       "name": "Katie",
       "job": "Euthenizer",
-      "id": 4
+      "id": 2
     }
   ],
   "location": [
