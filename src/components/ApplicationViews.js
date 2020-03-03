@@ -16,6 +16,7 @@ import AnimalEditForm from "./animal/AnimalEditForm"
 import EmployeeEditForm from "./employees/EmployeeEditForm"
 import OwnerEditForm from "./owner/OwnerEditForm"
 import LocationEditForm from "./location/LocationEditForm"
+import EmployeeWithAnimals from "./employees/EmployeeWithAnimals.js"
 import Login from "./auth/Login";
 
 const ApplicationViews = () => {
@@ -109,6 +110,9 @@ const ApplicationViews = () => {
           }
         }}
       />
+      <Route path="/employee/:employeeId(\d+)/details" render={(props) => {
+        return <EmployeeWithAnimals {...props} />
+      }} />
       <Route path="/employee/new"
         render={(props) => {
           return <EmployeeForm {...props} />

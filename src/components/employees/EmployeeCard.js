@@ -14,6 +14,8 @@ const EmployeeCard = props => {
         </h3>
         <p> Job: {props.employee.job}</p>
         <button type="button"
+        onClick={() => { props.history.push(`/employee/${props.employee.id}/details`) }}>Details</button>
+        <button type="button"
           onClick={() => props.history.push(`/employee/${props.employee.id}/edit`)}>
           Edit
       </button>

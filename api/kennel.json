@@ -1,26 +1,21 @@
 {
   "animals": [
     {
-      "id": 1,
-      "name": "Archibald",
-      "breed": "Shelty"
-    },
-    {
-      "name": "lil bruh",
-      "breed": "doggie",
-      "id": 2
+      "name": "Archie",
+      "breed": "Shelty",
+      "id": 1
     }
   ],
   "employee": [
     {
-      "id": 3,
+      "id": 1,
       "name": "Zoidberg!",
       "job": "Feeder"
     },
     {
       "name": "Katie",
       "job": "Euthenizer",
-      "id": 4
+      "id": 2
     }
   ],
   "location": [

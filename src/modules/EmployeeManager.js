@@ -7,6 +7,10 @@ export default {
     getAll() {
         return fetch(`${remoteURL}/employee`).then(result => result.json())
     },
+    getWithAnimals(id) {
+        return fetch(`${remoteURL}/employee/${id}?_embed=animals`)
+                .then(result => result.json())
+    },
     delete(id) {
         return fetch(`${remoteURL}/employee/${id}`, {
             method: "DELETE"
