@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import EmployeeManager from '../../modules/EmployeeManager'
+import AnimalManager from "../../modules/AnimalManager"
 import AnimalCard from '../animal/AnimalCard'
 
 const EmployeeWithAnimals = props => {
@@ -15,6 +16,18 @@ const EmployeeWithAnimals = props => {
       });
   }, []);
 
+  const handleDelete = () => {
+    //invoke the delete function in AnimalManger and re-direct to the employee list.
+    AnimalManager.delete(props.animalId).then(() =>
+      props.history.push("/employee")
+    );
+  };
+
+  const deleteAnimal = id => {
+    AnimalManager.delete(id)
+        .then(() => AnimalManager.getAll().then(setAnimals));
+};
+
   return (
     <div className="card">
       <p>Employee: {employee.name}</p>
@@ -22,6 +35,8 @@ const EmployeeWithAnimals = props => {
         <AnimalCard
           key={animal.id}
           animal={animal}
+          handleDelete={handleDelete}
+          deleteAnimal={deleteAnimal}
           {...props}
         />
       )}

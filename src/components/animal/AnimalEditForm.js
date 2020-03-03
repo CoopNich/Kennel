@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react"
 import AnimalManager from "../../modules/AnimalManager"
+import EmployeeManager from "../../modules/EmployeeManager"
 import "./AnimalForm.css"
 
 const AnimalEditForm = props => {
-    const [animal, setAnimal] = useState({ name: "", breed: "" });
+    const [animal, setAnimal] = useState({ name: "", breed: "", employeeId: "" });
+    const [employees, setEmployees] = useState([])
     const [isLoading, setIsLoading] = useState(false);
 
     const handleFieldChange = evt => {
@@ -20,7 +22,8 @@ const AnimalEditForm = props => {
         const editedAnimal = {
             id: props.match.params.animalId,
             name: animal.name,
-            breed: animal.breed
+            breed: animal.breed,
+            employeeId: parseInt(animal.employeeId)
         };
 
         AnimalManager.update(editedAnimal)
@@ -28,11 +31,16 @@ const AnimalEditForm = props => {
     }
 
     useEffect(() => {
+        EmployeeManager.getAll()
+            .then(employee => {
+                setEmployees(employee)
+            })
         AnimalManager.get(props.match.params.animalId)
             .then(animal => {
                 setAnimal(animal);
-                setIsLoading(false);
+
             });
+        setIsLoading(false);
     }, []);
 
     return (
