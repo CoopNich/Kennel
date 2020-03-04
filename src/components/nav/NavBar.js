@@ -1,8 +1,8 @@
 import React from "react";
-import { Link, NavLink, withRouter } from "react-router-dom";
+import { NavLink, withRouter } from "react-router-dom";
 import "./NavBar.css";
 
-const NavBar = () => {
+const NavBar = props => {
   return (
     <header>
       <h1 className="site-title">
@@ -17,26 +17,39 @@ const NavBar = () => {
               Home
             </NavLink>
           </li>
-          <li>
-            <NavLink className="nav-link" to="/animals" activeClassName="selected" activeStyle={{ color: "lime" }}>
-              Animals
+          {props.hasUser
+            ? <li>
+              <NavLink className="nav-link" to="/animals" activeClassName="selected" activeStyle={{ color: "lime" }}>
+                Animals
             </NavLink>
-          </li>
+            </li>
+            : null}
           <li>
             <NavLink className="nav-link" to="/location" activeClassName="selected" activeStyle={{ color: "lime" }}>
               Locations
             </NavLink>
           </li>
-          <li>
-            <NavLink className="nav-link" to="/employee" activeClassName="selected" activeStyle={{ color: "lime" }}>
-              Employees
+          {props.hasUser
+            ? <li>
+              <NavLink className="nav-link" to="/employee" activeClassName="selected" activeStyle={{ color: "lime" }}>
+                Employees
             </NavLink>
-          </li>
-          <li>
-            <NavLink className="nav-link" to="/owner" activeClassName="selected" activeStyle={{ color: "lime" }}>
-              Owners
+            </li>
+            : null}
+          {props.hasUser
+            ? <li>
+              <NavLink className="nav-link" to="/owner" activeClassName="selected" activeStyle={{ color: "lime" }}>
+                Owners
             </NavLink>
-          </li>
+            </li>
+            : null}
+          {!props.hasUser
+            ? <li>
+              <NavLink className="nav-link" to="/login" activeClassName="selected" activeStyle={{ color: "lime" }}>
+                Login
+            </NavLink>
+            </li>
+            : null}
         </ul>
       </nav>
     </header>
